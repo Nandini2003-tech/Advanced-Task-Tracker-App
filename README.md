@@ -1,4 +1,8 @@
-# Task Tracker App
+# Advanced Task Tracker App
+
+## Live Demo
+ [View Live](https://nandini2003-tech.github.io/Advanced-Task-Tracker-App/)
+
 A simple and responsive **Task Tracker** built with **HTML, CSS, and JavaScript**.  
 It allows you to **add, edit, delete, and manage tasks** efficiently. All tasks are saved in **localStorage**, so they remain even after refreshing the page.
 
@@ -28,9 +32,6 @@ It allows you to **add, edit, delete, and manage tasks** efficiently. All tasks 
 ## Technologies
 - HTML5, CSS3, JavaScript (ES6)  
 - LocalStorage for task persistence.  
-
-## Live Demo
- [View Live](https://nandini2003-tech.github.io/Advanced-Task-Tracker-App/)
 
 ## Author
 Nandini
