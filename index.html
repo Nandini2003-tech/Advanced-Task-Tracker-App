@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Tracker app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- navbar section -->
+      <header>
+        <nav>
+          <div class="logo">TaskTracker</div>
+          <i class="fa-solid fa-bars menu-bar" id="menuBar"></i>
+          <ul class="task-ul">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#tasklist">Tasks</a></li>
+            <li><a href="#addtask">Add Task</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- dashboard -->
+      <section class="dashboard" id="dashboard">
+        <h2>Dashboard</h2>
+        <div class="boxes">
+          <div class="box">
+            <p>Total Tasks</p>
+            <h3 id="totalTasks">0</h3>
+          </div>
+
+          <div class="box">
+            <p>Completed</p>
+            <h3 id="completedTasks">0</h3>
+          </div>
+
+          <div class="box">
+            <p>Pending</p>
+            <h3 id="pendingTasks">0</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- form section -->
+      <section class="add-task" id="addtask">
+        <div id="popup" class="popup">Task Added Successfully</div>
+        <form id="taskForm">
+          <div class="form-wrapper">
+            <h2>Add New Task</h2>
+            <input
+              type="text"
+              id="title"
+              placeholder="Enter a Task "
+              required
+            />
+            <input type="date" id="dueDate" placeholder="date" required/>
+
+            <select id="priority" class="priority" required title="priority">
+              <option value="">-- Choose priority--</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+
+            <button type="submit" class="addbtn" aria-label="all">
+              Add
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- tasklist sevction -->
+      <section class="task-list" id="tasklist">
+        <h2>Your Tasks</h2>
+        <!-- search box -->
+        <div class="task-controls">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search task..." />
+          </div>
+          <!-- buttons filter -->
+          <div class="filters">
+            <button onclick="showAll()" class="filterbtn">All</button>
+            <button onclick="showCompleted()" class="filterbtn">
+              Completed
+            </button>
+            <button onclick="showPending()" class="filterbtn">Pending</button>
+            <button onclick="clearCompleted()" class="filterbtn">
+              clear Completed Tasks
+            </button>
+          </div>
+        </div>
+
+        <div id="tasksContainer" class="tasksContainer"></div>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        <p>Task Tracker App 2026</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

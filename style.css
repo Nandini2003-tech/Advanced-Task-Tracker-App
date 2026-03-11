@@ -1,0 +1,314 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  transition: 0.3s;
+}
+#taskForm .addbtn,
+.cardbtns button,
+button {
+  background: #166c96;
+  color: white;
+}
+body,
+html {
+  scroll-padding-top: 60px;
+  background: #f5f5f5;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #166c96;
+  position: fixed;
+  z-index: 1000;
+}
+ header nav {
+  color: white;
+  padding: 10px 16px;
+  height: 60px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.nav-icons{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  gap:8px;
+}
+.menu-bar{
+display:none;
+}
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+/* form addtask */
+section {
+  scroll-padding-top: 60px;
+  padding: 40px 20px;
+}
+.dashboard {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 40px;
+}
+.dashboard h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.boxes {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 20px;
+}
+.box {
+  background: white;
+  box-shadow: 2px 2px 6px rgb(151, 150, 150);
+  height: 160px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.box h3 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.box:hover {
+  transform: translateY(-5px);
+}
+
+
+/* form  start-----------------------------*/
+
+/* form-section */
+.add-task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+/* popup */
+.popup{
+width:100%;
+background:#0b6b5d;
+color:white;
+padding:12px;
+text-align:center;
+display:none;
+border-radius:6px;
+margin-bottom:10px;
+}
+
+
+/* task form (form) */
+.add-task #taskForm {
+  background: white;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 2px 2px 6px rgb(83, 88, 90);
+}
+/* form-wrapper */
+.form-wrapper {
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 28px;
+  width: 80%;
+  justify-content: center;
+  margin: auto;
+}
+.form-wrapper h2 {
+  text-align: center;
+}
+
+.form-wrapper input,
+select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  border: 1px solid #ddd;
+}
+.form-wrapper .addbtn {
+  width: 50%;
+  margin: auto;
+}
+
+/*----------------task-list(cards)------------------------ */
+/* task-list section */
+.task-list {
+  padding: 50px;
+}
+.task-list h2 {
+  text-align: center;
+  margin-block: 1rem;
+  font-size: 26px;
+}
+/* search input */
+.task-list #searchInput {
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-shadow: 2px 2px 6px rgb(83, 88, 90);
+}
+/* filters  portion*/
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  margin: auto;
+}
+ .filters .filterbtn {
+  flex: 1;
+}
+.filters .filterbtn,
+.addbtn {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: 2px 2px 6px grey;
+}
+.filters button:hover,
+.task-card button:hover{
+  background-color:rgb(184, 84, 184);
+  color: white;
+}
+
+/* cards portion */
+
+/* task card container */
+.tasksContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 50px;
+}
+/* task perticular card */
+.tasksContainer .task-card {
+  background: white;
+  padding:28px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgb(94, 91, 91);
+  transition: 0.3s;
+}
+.task-card:hover {
+  transform: translatey(-4px);
+}
+.task-card h3 {
+  font-size: 24px;
+  text-transform: capitalize;
+  border-bottom: 1px solid grey;
+}
+/* priority div*/
+.task-card .priority {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.task-card .dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.priority span {
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+/* task card due date & status */
+.task-card p {
+  font-size: 14px;
+}
+/* task card 3buttons */
+.task-card .cardbtns {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.task-card .cardbtns button{
+  flex: 1;
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: none;
+}
+/*  */
+.completed {
+  background: #f0f0f0;
+}
+.completed .task-title {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+/* priority colors */
+.high{
+  background: red;
+}
+.medium {
+  background: orange;
+}
+.low {
+  background: green;
+}
+
+/* footer */
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #166c96;
+  color: white;
+}
