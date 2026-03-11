@@ -35,5 +35,5 @@ It allows you to **add, edit, delete, and manage tasks** efficiently. All tasks 
 ## Author
 Nandini
 
-- GitHub: [yourusername](https://github.com/yourusername)  
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-linkedin)
+- GitHub: [Nandini2003-tech](https://github.com/Nandini2003-tech)  
+- LinkedIn: [Nandini-tech](https://linkedin.com/in/nandini-t-35a125346)
