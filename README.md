@@ -30,11 +30,10 @@ It allows you to **add, edit, delete, and manage tasks** efficiently. All tasks 
 - LocalStorage for task persistence.  
 
 ## Live Demo
-[View Live](https://yourusername.github.io/Task-Tracker/)
+ [View Live](https://nandini2003-tech.github.io/Advanced-Task-Tracker-App/)
 
 ## Author
 Nandini
 
-**Your Name**  
 - GitHub: [yourusername](https://github.com/yourusername)  
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-linkedin)
